@@ -14,30 +14,19 @@
     <!-- Change to {{myName}} -->
     <div class="list-container">
       <div class="row">
-
         <div class="col-xs-12">
 
-          <div>
-            <div >
               <h2>Your List </h2>
-
               <ul>
                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span> <input type="search" ng-model="fList" placeholder="Filter..." / >
-
-
-
                 <li ng-repeat="myList in list | filter: fList">
-                                    {{myList.item}}       {{myList.price}}
+                    {{myList.item}}       {{myList.price}}
                   <li class="animate-repeat" ng-if="myList.length == 0">
                     <strong>Rawr, no results found...try again.</strong>
                   </li>
-
-
-
                 </li>
                 <br/>
               </ul>
-
               <form>
                 <input class="add-item" placeholder="Apple" type="text" ng-model="newItem"/>
                 <input class="add-price" placeholder="$1" type="number" ng-model="newPrice"/>
@@ -45,12 +34,7 @@
               </form>
               <h2>Total: {{total | currency}}</h2>
 
-            </div>
-          </div>
-
         </div>
-
-
       </div>
     </div>
 
