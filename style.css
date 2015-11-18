@@ -1,0 +1,28 @@
+body {
+  background-color: #28BDC8;
+}
+header{
+
+  text-align: center;
+}
+
+.list-container{
+  height: 100em;
+  width: 60%;
+  margin: auto;
+  background-color: #CB5940;
+  opacity: .9;
+text-align: center;}
+
+h1 {
+  display: inline-block;
+  text-align: center;
+}
+
+.row {
+  display: inline-block;
+}
+
+.col-xs-12 ul li {
+  list-style-type: none;
+}

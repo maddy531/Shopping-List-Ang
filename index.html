@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="utf-8">
+    <title>Shop Around 2</title>
+  </head>
+  <body ng-app="myModule" ng-controller="myCtrl">
+    <header><h1>Shop Around</h1></header>
+    <!-- Change to {{myName}} -->
+    <div class="list-container">
+      <div class="row">
+
+        <div class="col-xs-12">
+
+          <div>
+            <div >
+              <h2>Your List </h2>
+
+              <ul>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span> <input type="search" ng-model="fList" placeholder="Filter..." / >
+
+
+
+                <li ng-repeat="myList in list | filter: fList">
+                                    {{myList.item}}       {{myList.price}}
+                  <li class="animate-repeat" ng-if="myList.length == 0">
+                    <strong>Rawr, no results found...try again.</strong>
+                  </li>
+
+
+
+                </li>
+                <br/>
+              </ul>
+
+              <form>
+                <input class="add-item" placeholder="Apple" type="text" ng-model="newItem"/>
+                <input class="add-price" placeholder="$1" type="number" ng-model="newPrice"/>
+                <button class="add-btn" ng-click="addToList()"> <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> </button>
+              </form>
+              <h2>Total: {{total | currency}}</h2>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+      <script src="angular.js"></script>
+    </body>
+    </html>
